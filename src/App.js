@@ -1,11 +1,15 @@
-import './App.css';
-import HngStageOne from './components/HngStageOne';
+import { Routes, Route } from "react-router-dom";
+import { ContactPage } from "./components/ContactPage";
+import { HngStageOne } from "./components/HngStageOne";
 
 function App() {
   return (
-    <div className="App">
-      <HngStageOne/>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HngStageOne />} />
+        <Route path="contact" element={<ContactPage />} />
+      </Routes>
+    </>
   );
 }
 
